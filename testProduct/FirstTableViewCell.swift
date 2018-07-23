@@ -4,7 +4,7 @@
 //
 //  Created by Amit on 7/17/18.
 //  Copyright © 2018 Amit. All rights reserved.
-//
+////
 
 import UIKit
 
@@ -28,7 +28,7 @@ class FirstTableViewCell: UITableViewCell {
         FolderLabel.isUserInteractionEnabled = true
         let recognizer = UITapGestureRecognizer(target: self, action:Selector(("handleTap:")))
         recognizer.numberOfTapsRequired = 1
-        self.FolderLabel.addGestureRecognizer(recognizer)
+        self.FolderLabel.addGestureRecognizer(recognizer) //crashing???
     }
     
     func handleTap(recognizer: UITapGestureRecognizer){

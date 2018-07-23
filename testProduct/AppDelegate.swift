@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  testProduct
-//
-//  Created by Amit on 7/16/18.
-//  Copyright © 2018 Amit. All rights reserved.
-//
+//thread1??
 
 import UIKit
 
