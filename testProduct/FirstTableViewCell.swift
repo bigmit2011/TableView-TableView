@@ -26,12 +26,12 @@ class FirstTableViewCell: UITableViewCell {
         //print(FolderLabel)
         
         FolderLabel.isUserInteractionEnabled = true
-        let recognizer = UITapGestureRecognizer(target: self, action:Selector(("handleTap:")))
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(FirstTableViewCell.handleTap(recognizer:)))
         recognizer.numberOfTapsRequired = 1
         self.FolderLabel.addGestureRecognizer(recognizer) //crashing???
     }
     
-    func handleTap(recognizer: UITapGestureRecognizer){
+    @objc func handleTap(recognizer: UITapGestureRecognizer){
         delegate!.func1(sender: self)
     }
     func setCell (cell : FolderCell){
