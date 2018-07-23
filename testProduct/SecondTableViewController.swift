@@ -9,8 +9,11 @@ class SecondTableViewController: UIViewController {
      // need to get folder name from FirstTableViewCell
     
     
-
+    @IBOutlet weak var secondTableView: UITableView!
+    
     override func viewDidLoad() {
+        secondTableView.delegate = self
+        secondTableView.dataSource = self
         super.viewDidLoad()
         }
     

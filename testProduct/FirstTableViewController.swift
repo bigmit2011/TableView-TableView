@@ -30,6 +30,7 @@ class FirstTableViewController: UIViewController {
             
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         createFolders() //create folders
         moveImages() // move images to folders
         dataCells =  createArrayData() //create dataObjects
@@ -120,7 +121,7 @@ class FirstTableViewController: UIViewController {
                 let allImageDirectories =  try! FileManager.default.contentsOfDirectory(atPath: documentDirectory)
             
                 let imageDirectories = allImageDirectories[1...(allImageDirectories.count-1)]
-                 print(imageDirectories)
+            
             for directory in imageDirectories{
                     //print("This" + directory)
                     
@@ -140,7 +141,7 @@ class FirstTableViewController: UIViewController {
                 
             }
             
-            print(folderCells)
+            
                     
             return folderCells
                 }
@@ -200,7 +201,7 @@ extension FirstTableViewController: UITableViewDelegate, UITableViewDataSource{
             let folderCell = dataCells[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableCell") as! FirstTableViewCell
             cell.setCell(cell:folderCell)
-            print(cell.FolderLabel)
+        
             cell.delegate = self
             return cell
         
